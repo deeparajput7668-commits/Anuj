@@ -20,13 +20,20 @@ export const BagZoomModal: React.FC<BagZoomModalProps> = ({ isOpen, onClose }) =
       >
         {/* Modal Top Bar (Warm Ivory & Deep Slate) */}
         <div className="bg-[#F8F6F0] text-[#344454] p-4 sm:p-5 flex items-center justify-between border-b border-[#E5DFD2]">
-          <div>
-            <h3 className="text-sm sm:text-base font-bold text-[#344454]">
-              Official Packaging Inspection (20 KG Bag)
-            </h3>
-            <p className="text-xs text-[#737373]">
-              CERASTONE™ TILE ADHESIVE · Front &amp; Back Specification Details
-            </p>
+          <div className="flex items-center gap-3">
+            <img
+              src={CERASTONE_INFO.logoUrl}
+              alt="Cerastone Brand Logo"
+              className="h-9 w-auto max-w-[50px] object-contain rounded-md border border-[#E5DFD2] bg-[#FFFFFF] p-1 shadow-2xs"
+            />
+            <div>
+              <h3 className="text-sm sm:text-base font-bold text-[#344454]">
+                Official Packaging Inspection (20 KG Bag)
+              </h3>
+              <p className="text-xs text-[#737373]">
+                CERASTONE™ TILE ADHESIVE · Front &amp; Back Specification Details
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-2">

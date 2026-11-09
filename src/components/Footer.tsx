@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, MapPin, ShieldCheck, ArrowUp, FileText } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, ShieldCheck, ArrowUp, FileText, Mail } from 'lucide-react';
 import { CERASTONE_INFO } from '../data/cerastoneData';
 
 interface FooterProps {
@@ -18,7 +18,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTds, onOpenEnquiry }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#E5DFD2]">
           {/* Brand Info (Col 5) */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src={CERASTONE_INFO.logoUrl}
+                alt="Cerastone Brand Logo"
+                className="h-10 w-auto max-w-[58px] object-contain rounded-lg border border-[#E5DFD2] bg-[#FFFFFF] p-1 shadow-2xs"
+              />
               <span className="font-extrabold text-xl tracking-tight text-[#344454]">
                 CERASTONE<span className="text-xs font-bold text-[#C5A46D] align-super">™</span> TILE ADHESIVE
               </span>
@@ -114,6 +119,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTds, onOpenEnquiry }) => {
                   >
                     <Phone className="w-4 h-4 text-[#C5A46D]" />
                     <span>{CERASTONE_INFO.company.phone}</span>
+                  </a>
+                  <a
+                    href={`mailto:${CERASTONE_INFO.company.email}`}
+                    className="text-xs font-medium text-[#737373] hover:text-[#C5A46D] transition-colors flex items-center gap-1.5 mt-1"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-[#C5A46D]" />
+                    <span>{CERASTONE_INFO.company.email}</span>
                   </a>
                 </div>
                 <a

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, Menu, X, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X, ArrowUpRight, ShieldCheck, Mail } from 'lucide-react';
 import { CERASTONE_INFO } from '../data/cerastoneData';
 
 interface NavbarProps {
@@ -36,6 +36,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry, onOpenTds }) => {
           </div>
           <div className="flex items-center gap-4">
             <a
+              href={`mailto:${CERASTONE_INFO.company.email}`}
+              className="hidden lg:flex items-center gap-1.5 text-[#344454] hover:text-[#C5A46D] transition-colors font-medium whitespace-nowrap"
+            >
+              <Mail className="w-3 h-3 text-[#C5A46D]" />
+              <span>{CERASTONE_INFO.company.email}</span>
+            </a>
+            <a
               href={`tel:${CERASTONE_INFO.company.phone}`}
               className="flex items-center gap-1.5 text-[#344454] hover:text-[#C5A46D] transition-colors font-medium whitespace-nowrap"
             >
@@ -61,8 +68,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry, onOpenTds }) => {
         <a href="#overview" className="flex items-center gap-3 shrink-0 group">
           <img
             src={CERASTONE_INFO.logoUrl}
-            alt="Cerastone Circular Emblem Logo"
-            className="w-11 h-11 object-contain rounded-full border border-[#E5DFD2] bg-[#FFFFFF] p-0.5 shadow-2xs group-hover:scale-105 transition-transform"
+            alt="Cerastone Brand Logo"
+            className="h-10 w-auto max-w-[58px] object-contain rounded-lg border border-[#E5DFD2] bg-[#FFFFFF] p-1 shadow-2xs group-hover:scale-105 transition-transform"
           />
           <div className="flex flex-col">
             <div className="flex items-center gap-1.5">
@@ -166,6 +173,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry, onOpenTds }) => {
               >
                 <Phone className="w-4 h-4 text-[#C5A46D]" />
                 <span>Call {CERASTONE_INFO.company.phone}</span>
+              </a>
+              <a
+                href={`mailto:${CERASTONE_INFO.company.email}`}
+                className="w-full py-2 text-center text-sm font-medium text-[#344454] bg-[#F8F6F0] rounded-lg border border-[#E5DFD2] flex items-center justify-center gap-2"
+              >
+                <Mail className="w-4 h-4 text-[#C5A46D]" />
+                <span>{CERASTONE_INFO.company.email}</span>
               </a>
             </div>
           </div>

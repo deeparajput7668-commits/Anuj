@@ -49,13 +49,20 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
       >
         {/* Header (Warm Ivory & Deep Slate) */}
         <div className="bg-[#F8F6F0] text-[#344454] p-5 flex items-center justify-between border-b border-[#E5DFD2]">
-          <div>
-            <h3 className="text-base font-bold text-[#344454]">
-              Request Price Quote &amp; Dealership
-            </h3>
-            <p className="text-xs text-[#737373]">
-              CERASTONE™ TILE ADHESIVE · A S Enterprises
-            </p>
+          <div className="flex items-center gap-3">
+            <img
+              src={CERASTONE_INFO.logoUrl}
+              alt="Cerastone Brand Logo"
+              className="h-9 w-auto max-w-[50px] object-contain rounded-md border border-[#E5DFD2] bg-[#FFFFFF] p-1 shadow-2xs"
+            />
+            <div>
+              <h3 className="text-base font-bold text-[#344454]">
+                Request Price Quote &amp; Dealership
+              </h3>
+              <p className="text-xs text-[#737373]">
+                CERASTONE™ TILE ADHESIVE · A S Enterprises
+              </p>
+            </div>
           </div>
           <button
             onClick={onClose}

@@ -22,18 +22,25 @@ export const TdsModal: React.FC<TdsModalProps> = ({ isOpen, onClose }) => {
       >
         {/* Header (Warm Ivory & Deep Slate) */}
         <div className="bg-[#F8F6F0] text-[#344454] p-5 sm:p-6 flex items-center justify-between border-b border-[#E5DFD2]">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-base font-bold tracking-tight text-[#344454]">
-                CERASTONE™ TILE ADHESIVE
-              </span>
-              <span className="text-[10px] bg-[#B99A62] text-white font-bold px-1.5 py-0.5 rounded">
-                TDS
-              </span>
+          <div className="flex items-center gap-3">
+            <img
+              src={CERASTONE_INFO.logoUrl}
+              alt="Cerastone Brand Logo"
+              className="h-9 w-auto max-w-[50px] object-contain rounded-md border border-[#E5DFD2] bg-[#FFFFFF] p-1 shadow-2xs"
+            />
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-base font-bold tracking-tight text-[#344454]">
+                  CERASTONE™ TILE ADHESIVE
+                </span>
+                <span className="text-[10px] bg-[#B99A62] text-white font-bold px-1.5 py-0.5 rounded">
+                  TDS
+                </span>
+              </div>
+              <p className="text-xs text-[#737373]">
+                Technical Data Sheet · Polymer-Modified Cementitious Tile Adhesive
+              </p>
             </div>
-            <p className="text-xs text-[#737373]">
-              Technical Data Sheet · Polymer-Modified Cementitious Tile Adhesive
-            </p>
           </div>
 
           <div className="flex items-center gap-2">
@@ -115,9 +122,12 @@ export const TdsModal: React.FC<TdsModalProps> = ({ isOpen, onClose }) => {
               <div className="text-[#737373]">Plot No. A, Khasra No. 484, Modinagar Road, Pilkhuwa, Hapur (U.P.), India</div>
             </div>
             <div className="shrink-0 text-right">
-              <div className="text-[11px] text-[#737373]">Helpline:</div>
-              <a href="tel:9275277273" className="font-bold text-[#344454] hover:text-[#C5A46D]">
+              <div className="text-[11px] text-[#737373]">Helpline &amp; Email:</div>
+              <a href="tel:9275277273" className="font-bold text-[#344454] hover:text-[#C5A46D] block">
                 +91 9275277273
+              </a>
+              <a href={`mailto:${CERASTONE_INFO.company.email}`} className="text-[#737373] hover:text-[#C5A46D] block mt-0.5">
+                {CERASTONE_INFO.company.email}
               </a>
             </div>
           </div>

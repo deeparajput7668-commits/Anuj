@@ -4,6 +4,7 @@ import {
   MapPin, 
   Phone, 
   MessageCircle, 
+  Mail,
   Send, 
   CheckCircle, 
   Award, 
@@ -153,6 +154,17 @@ export const CompanyAndContact: React.FC<CompanyAndContactProps> = ({
                     <span>Chat on WhatsApp</span>
                   </span>
                   <span className="text-xs font-semibold text-[#737373] uppercase">Fast Reply</span>
+                </a>
+
+                <a
+                  href={`mailto:${CERASTONE_INFO.company.email}`}
+                  className="w-full py-3 px-4 bg-[#FFFFFF] hover:bg-[#F8F6F0] border border-[#E5DFD2] text-[#344454] rounded-xl font-bold text-sm transition-all flex items-center justify-between cursor-pointer"
+                >
+                  <span className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-[#C5A46D]" />
+                    <span>Email: {CERASTONE_INFO.company.email}</span>
+                  </span>
+                  <span className="text-xs font-semibold text-[#737373] uppercase">Send Mail</span>
                 </a>
               </div>
 

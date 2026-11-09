@@ -16,7 +16,7 @@ export const CERASTONE_INFO = {
     address: "Plot No. A, Khasra No. 484, Modinagar Road, Pilkhuwa, Hapur (U.P.), India",
     phone: "9275277273",
     displayPhone: "+91 9275277273",
-    email: "enquiry@cerastonetile.com",
+    email: "indiacerastone@gmail.com",
     whatsappUrl: "https://wa.me/919275277273?text=Hi%20Cerastone%20Team,%20I%20am%20interested%20in%20Cerastone%20Tile%20Adhesive%20pricing%20and%20dealership.",
   },
   product: {
@@ -32,7 +32,7 @@ export const CERASTONE_INFO = {
     certifications: ["ISO 9001:2015 Certified", "Make In India", "IS 15477 Type 2 Compliant"],
     applications: "Ceramic, Vitrified, Mosaic, Porcelain Tiles & Natural Stones",
   },
-  logoUrl: "/assets/aistudio/WhatsApp_Image_2026-11-04_at_11.21.12_a16d10d9.jpeg",
+  logoUrl: "/assets/aistudio/WhatsApp_Image_2026-11-09_at_18.18.33_e465d809.jpeg",
   bagPackagingUrl: "/assets/aistudio/WhatsApp_Image_2026-11-03_at_19.00.57__1__8bc7f57a.jpeg",
 };
 
